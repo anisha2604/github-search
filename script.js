@@ -51,6 +51,36 @@ $('#typeahead-input').typeahead({
         } else {
           $("#issues-list").html("").append("<li>No Issues for Today</li>");
         }
+
+        $("#issues-list").on("click", "li", function () {
+          var id = $(this).index();
+          var issue = issues[id];
+          console.log(issue);
+
+          $(".search, .repo, .issue").toggleClass("hidden");
+
+          $("#issue-title").text(issue.title);
+          $("#issue-description").text(issue.body);
+          if (issue.labels != 0) {
+            $("#issue-labels").html("");
+            for (var i=0; i<issue.labels.length; i++) {
+              var label = issue.labels[i];
+              console.log(label.name);
+
+              if(i == issue.labels.length - 1) {
+                $("#issue-labels").append(label.name);
+              } else {
+                $("#issue-labels").append(label.name+", ");
+              }
+            }
+          } else {
+            $("#issue-labels").html("").append("No Labels");
+          }
+
+          var user = issue.user;
+          console.log(user);
+          $("#issue-creator").attr("src", user.avatar_url);
+        });
       }
     });
 

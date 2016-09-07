@@ -25,4 +25,9 @@ h3 {
 
 .repo ul li {
   padding: 5px 0;
+  cursor: pointer;
+}
+
+img {
+  width: 150px !important;
 }
