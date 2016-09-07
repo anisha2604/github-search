@@ -1,3 +1,10 @@
+if(localStorage.getItem("number") == null) {
+  localStorage.setItem("number", "0");
+} else {
+  var count = localStorage.getItem("number");
+  $("#counter").html(count);
+}
+
 $('#typeahead-input').typeahead({
   minLength: 3,
   items: 20,
@@ -56,6 +63,11 @@ $('#typeahead-input').typeahead({
           var id = $(this).index();
           var issue = issues[id];
           console.log(issue);
+
+          count++;
+          console.log(count);
+          localStorage.setItem("number", count);
+          $("#counter").html(count);
 
           $(".search, .repo, .issue").toggleClass("hidden");
 
