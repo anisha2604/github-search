@@ -1,0 +1,15 @@
+.navbar {
+  border-radius: 0 !important;
+}
+
+.search input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #333;
+  border-radius: 5px;
+}
+
+.search input:focus {
+  outline: none !important;
+  box-shadow: 0 0 10px #aaa;
+}
