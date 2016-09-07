@@ -80,6 +80,14 @@ $('#typeahead-input').typeahead({
           var user = issue.user;
           console.log(user);
           $("#issue-creator").attr("src", user.avatar_url);
+
+          $("#issue-creator").click(function () {
+            $(".issue, .user").toggleClass("hidden");
+
+            $("#user-name").text(user.login);
+            $("#github-url").text(user.html_url);
+            $("#user-avatar").attr("src", user.avatar_url);
+          });
         });
       }
     });

@@ -28,6 +28,10 @@ h3 {
   cursor: pointer;
 }
 
+#issue-creator {
+  cursor: pointer;
+}
+
 img {
   width: 150px !important;
 }
