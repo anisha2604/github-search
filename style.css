@@ -13,3 +13,16 @@
   outline: none !important;
   box-shadow: 0 0 10px #aaa;
 }
+
+h3 {
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+.repo ul {
+  padding-left: 15px !important;
+}
+
+.repo ul li {
+  padding: 5px 0;
+}
